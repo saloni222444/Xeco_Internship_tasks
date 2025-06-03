@@ -1,0 +1,238 @@
+body {
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+  margin: 20px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Minimum width before scrolling */
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 12px 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background-color: #2c2c2c;
+  color: #fff;
+  position: sticky;
+  top: 0;
+}
+
+tr:nth-child(even) {
+  background-color: #252525;
+}
+
+tr:hover {
+  background-color: #333;
+}
+
+a {
+  text-align: center;
+  display: block;
+  color: #2196f3;
+  text-decoration: none;
+  margin-top: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+/* Button styles */
+button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0d8bf2;
+}
+
+.save-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #3e8e41;
+}
+
+/* Input styles for edit mode */
+.edit-input {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+}
+
+/* Pagination styles */
+#pagination {
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+#pagination button {
+  background-color: #2196f3;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  min-width: 40px;
+}
+
+#pagination button:hover:not(:disabled) {
+  background-color: #0d8bf2;
+}
+
+#pagination button:disabled {
+  background-color: #555;
+  cursor: default;
+}
+
+#pagination span {
+  font-size: 14px;
+  color: #ccc;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+  
+  th, td {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .table-responsive {
+    border: 1px solid #444;
+    border-radius: 5px;
+  }
+  
+  #pagination {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #pagination button {
+    margin: 2px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  th, td {
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+  
+  a {
+    padding: 6px;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .edit-input {
+    padding: 4px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  th, td {
+    padding: 5px 3px;
+    font-size: 11px;
+  }
+  
+  #pagination button {
+    padding: 6px 8px;
+    font-size: 12px;
+    min-width: 30px;
+    margin: 1px 0;
+    width: 100%;
+  }
+  
+  #pagination span {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}
